@@ -5,26 +5,19 @@
         <a class="navbar-item">
           <p>BCR.</p>
         </a>
-        <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+        <span class="navbar-burger burger" data-target="main-nav">
           <span></span>
           <span></span>
           <span></span>
         </span>
       </div>
-      <div id="navbarMenuHeroC" class="navbar-menu">
+      <div id="main-nav" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item is-active">
-            Home
-          </a>
-          <a class="navbar-item">
-            Examples
-          </a>
-          <a class="navbar-item">
-            Documentation
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
+          <%= link_to "Home", root_path, class: "navbar-item is-active" %>
+          <%= link_to "About BCR", pages_about_bcr_path, class: "navbar-item" %>
+          <%= link_to "Our Coffee", pages_about_coffee_path, class: "navbar-item" %>
+          <%= link_to "About Us", pages_about_us_path, class: "navbar-item" %>
+          <%= link_to "Contact", pages_contact_path, class: "navbar-item" %>
         </div>
       </div>
     </div>
