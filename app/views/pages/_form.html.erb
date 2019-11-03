@@ -1,5 +1,5 @@
 <%= form_for @contact, url: pages_contact_path do |f| %>
-  <div class="field is-grouped">
+  <div class="field has-addons">
     <div class="control">
       <%= f.text_field  :first_name, required: true, class: "input", placeholder: "First name" %>
     </div>
@@ -11,13 +11,13 @@
 
   <div class="field">
     <div class="control">
-      <%= f.text_field  :email, required: true, class: "input", placeholder: "Email address" %>
+      <%= f.email_field  :email, required: true, class: "input", placeholder: "Email address" %>
     </div>
   </div>
 
   <div class="field">
     <div class="control">
-      <%= f.text_area  :message, required: true, class: "input", placeholder: "Message" %>
+      <%= f.text_area  :message, required: true, class: "textarea", placeholder: "Message" %>
     </div>
   </div>
 
@@ -26,6 +26,5 @@
       <%= f.submit 'Send Message', class: 'button is-primary' %>
     </div>
   </div>
-
   <%= f.text_field :nickname, :hint => 'Leave this field blank!', hidden: true %>
 <% end %>

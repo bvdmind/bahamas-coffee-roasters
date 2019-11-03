@@ -15,7 +15,21 @@
 
       <%= render 'layouts/flash' %>
 
-      <%= yield %>
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="columns">    
+            <div class="column">
+            </div>
+
+            <div class="column">
+              <%= yield %>
+            </div>
+
+            <div class="column">
+            </div>
+          </div>
+        </div>
+      </div>
 
       <%= render 'layouts/footer' %>
     </section>
