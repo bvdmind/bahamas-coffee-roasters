@@ -21,9 +21,9 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @contact.deliver
-        format.html { render 'landing', notice: "Thank you for your message, we shall get back to shortly!" }
+        format.html { redirect_to :root, notice: "Thank you for your message, we shall get back to shortly!" }
       else
-        format.html { render 'contact', error: "Message did not send, please try again." }
+        format.html { render 'contact', alert: "Message did not send, please try again." }
       end
     end
   end

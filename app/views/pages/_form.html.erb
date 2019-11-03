@@ -1,23 +1,31 @@
 <%= form_for @contact, url: pages_contact_path do |f| %>
-  <div class="col-md-6">
-    <%= f.label :first_name %></br>
-    <%= f.text_field  :first_name, required: true, class: "contact-form-text-area" %></br>
-
-    <%= f.label :last_name %></br>
-    <%= f.text_field  :last_name, required: true, class: "contact-form-text-area" %></br>
-
-    <%= f.label :email %></br>
-    <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
-
-    <%= f.label :message %></br>
-    <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
-        placeholder: "Send me a message"%></br>
-
-    <div class= "hidden">
-      <%= f.label :nickname %>
-      <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+  <div class="field is-grouped">
+    <div class="control">
+      <%= f.text_field  :first_name, required: true, class: "input", placeholder: "First name" %>
     </div>
 
-    <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+    <div class="control">
+      <%= f.text_field  :last_name, required: true, class: "input", placeholder: "Last name" %>
+    </div>
   </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.text_field  :email, required: true, class: "input", placeholder: "Email address" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.text_area  :message, required: true, class: "input", placeholder: "Message" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control has-text-centered">
+      <%= f.submit 'Send Message', class: 'button is-primary' %>
+    </div>
+  </div>
+
+  <%= f.text_field :nickname, :hint => 'Leave this field blank!', hidden: true %>
 <% end %>
