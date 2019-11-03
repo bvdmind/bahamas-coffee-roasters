@@ -10,8 +10,11 @@
   </head>
 
   <body data-controller="main">
-    <section class="hero is-primary is-fullheight">
+    <section class="hero is-light is-fullheight">
       <%= render 'layouts/navbar' %>
+
+      <%= render 'layouts/flash' %>
+
       <%= yield %>
       <%= render 'layouts/footer' %>
     </section>
