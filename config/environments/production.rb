@@ -119,8 +119,8 @@ config.action_mailer.smtp_settings = {
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'bahamas-coffee-roasters.herokuapp.com',
-  user_name:            Rails.application.credentials.gmail_email,
-  password:             Rails.application.credentials.gmail_password,
+  user_name:            Rails.application.credentials[:gmail_email],
+  password:             Rails.application.credentials[:gmail_password],
   authentication:       'plain',
   enable_starttls_auto: true  }
 end
