@@ -12,4 +12,8 @@ module ApplicationHelper
   def copyright_helper
     "\u00A9 Copyright Bahamas Coffee Roasters " + Time.now.year.to_s + ". All rights reserved."
   end
+
+  def active? path
+    "is-active" if current_page? path
+  end
 end
